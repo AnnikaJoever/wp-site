@@ -1,0 +1,400 @@
+/*
+Theme Name: Kurssi
+Theme URI: http://users.metropolia.fi
+Author: Nimi
+Author URI: https://metropolia.fi/
+Description: Teeman teon opiskelua
+Version: 0.1
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Tags: blue
+Text Domain: Kurssi
+
+This theme, like WordPress, is licensed under the GPL.
+Use it to make something cool, have fun, and share what you've learned with others.
+*/
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+    font-family: 'Lato', sans-serif;
+    font-weight: 400;
+    line-height: 1.7;
+}
+
+.section {
+    padding: 3rem 0;
+}
+
+.main-header {
+    display: flex;
+    height: 80px;
+    align-items: center;
+}
+
+.mobile-bars {
+    display: none;
+}
+
+.site-title {
+    font-size: 25px;
+    padding-right: 32px;
+}
+
+.site-title a:visited {
+    color: inherit;
+}
+
+.menu {
+    display: flex;
+}
+
+.menu-item {
+    padding-right: 32px;
+}
+
+.category-submenu {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+}
+
+.banner {
+    height: 500px;
+    background-size: cover;
+    background-position: 50%;
+}
+
+.main-header, .page-content, .fp-group .wp-block-group__inner-container, .contact-section {
+    margin: auto;
+}
+
+#wpgmza_map {
+    margin: 3rem 0 2rem 0;
+}
+
+footer {
+    display: flex;
+    justify-content: center;
+    background-color: #151515;
+    color: #7f7f7f;
+}
+
+footer div {
+    margin: 0 4rem;
+}
+
+.heading {
+    color: #f5a637;
+    font-weight: 700;
+    font-size: .75rem;
+    letter-spacing: .05em;
+    text-transform: uppercase;
+}
+
+.page-article {
+    display: none;
+}
+
+.page-article:nth-of-type(1) {
+    display: block;
+}
+
+.post-menu {
+    display: inline-block;
+    width: 100%;
+    text-align: center;
+}
+
+.menu-item a, .post-btn {
+    font-weight: 900;
+    font-size: .75rem;
+    letter-spacing: .05em;
+    text-transform: uppercase;
+    background-color: inherit;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    color: #777;
+    padding: .3rem 0;
+    margin: 1rem;
+}
+
+.menu-item a:hover, .post-btn:hover {
+    color: inherit;
+}
+
+.current-menu-item > a, .current-category-ancestor > a, .current-post-ancestor > a {
+    color: #f5a637;
+}
+
+.active {
+    border-bottom: 3px solid #f5a637;
+    color: #000;
+}
+
+.post-content {
+    display: grid;
+    grid-template-columns: auto auto;
+    padding: 1rem 0;
+}
+
+.wp-block-image img{
+    max-width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.wp-block-group:not(.fp-group, .contact-block) {
+    padding: 1rem 3rem;
+    margin: auto 3rem;
+}
+
+.wp-block-group__inner-container {
+    max-width: 1140px;
+    margin: 0;
+}
+
+.wp-block-group__inner-container h4 {
+    font-weight: 600;
+}
+
+.wp-block-group__inner-container p {
+    padding: .5rem 0 .5rem;
+}
+
+.contact-map #wpgmza_map{
+    margin: 0;
+}
+
+.wpcf7-form > h3 {
+    padding: 0.4rem 0 .4rem;
+}
+
+.wpcf7-form-control {
+    width: 100%;
+    border: 1px solid;
+    padding: .45em;
+    background-color: inherit;
+}
+
+.wpcf7-submit {
+    text-transform: uppercase;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.open {
+    margin-top: 2rem;
+}
+
+.contact-block {
+    margin-bottom: 2rem;
+}
+
+@media (min-width: 576px){
+    .main-header, .page-content, .wp-block-group__inner-container, .contact-section {
+        max-width: 540px;
+    }
+}
+
+@media (min-width: 768px){
+    .main-header, .page-content, .wp-block-group__inner-container, .contact-section {
+        max-width: 720px;
+    }
+
+    .ruokalista {
+        min-width: 255px;
+        margin: 0 4rem 0 2rem;
+    }
+
+    .contact-section {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    
+    .contact-block {
+        margin: 0 3rem;
+    }
+    
+    .wpcf7 {
+        margin: 0 3rem;
+        width: 50%;
+    }
+}
+
+@media (min-width: 992px){
+    .main-header, .page-content, .fp-group .wp-block-group__inner-container, .contact-section {
+        max-width: 960px;
+    }
+}
+
+@media (min-width: 1200px){
+    .main-header, .page-content, .fp-group .wp-block-group__inner-container, .contact-section {
+        max-width: 1140px;
+    }
+
+    .ruokalista {
+        margin: 0 0 0 4rem;
+    }
+
+    .wp-block-image {
+        position: relative;
+        height: 500px;
+        justify-self: right;
+    }
+
+    .wp-block-image img {
+        height: 100%;
+    }
+
+    .wp-block-image::before {
+        position: absolute;
+        z-index: -1;
+        width: 333px;
+        height: 100%;
+        content: "";
+        top: 12%;
+        left: 10%;
+        border: 1px solid #f6ae4969;
+    }
+
+    .contact-block {
+        margin: 0 5rem;
+    }
+    
+    .wpcf7 {
+        margin: 0 5rem;
+    }
+}
+
+@media (min-width: 1800px){
+    .wp-block-image {
+        margin-bottom: 1em;
+        padding: 0 3rem 0 0;
+        justify-self: right;
+    }
+
+    .ruokalista {
+        margin-left: 1rem;
+    }
+}
+
+@media (max-width: 1199px){
+    .wp-block-columns {
+        display: block !important;
+    }
+    
+    .wp-block-column:not(:first-child) {
+        margin: 0 !important;
+    }
+}
+
+@media (max-width: 768px){
+    .main-header {
+        display: flex;
+        flex-wrap: wrap;
+        height: 100%;
+        justify-content: space-between;
+    }
+
+    .main-nav {
+        text-align: center;
+        padding-bottom: 19px;
+        width: 100%;
+    }
+
+    .menu {
+        display: none;
+    }
+
+    .menu-item {
+        padding: 0.3rem 0;
+    }
+
+    .active-menu {
+        display: block;
+    }
+
+    .site-title {
+        padding: 19px 32px 0 0;
+    }
+
+    .mobile-bars {
+        display: block;
+        margin-top: 19px;
+        font-size: 25px;
+        background-color: inherit;
+        border: none;
+        cursor: pointer;
+    }
+
+    .mobile-bars:focus {
+        outline: none;
+    }
+
+    .menu-item a {
+        font-size: 0.8rem;
+    }
+
+    .post-btn {
+        margin: 1rem 0.8rem;
+    }
+
+    .banner {
+        height: 255px;
+    }
+
+    .wp-block-image {
+        display: none;
+    }
+
+    .wp-block-group:not(.fp-group, .contact-block) {
+        padding: 0;
+        margin: auto;
+    }
+
+    .post-content {
+        display: block;
+    }
+
+    .wp-block-group__inner-container {
+        margin: auto;
+    }
+}
+
+@media (max-width: 575px){
+    .section {
+        padding: 3rem 1rem;
+    }
+
+    .main-header {
+        padding: 0 1rem;
+    }
+
+    footer {
+        justify-content: space-evenly;
+    }
+
+    footer div {
+        margin: 0;
+    }
+}
+
+@media (max-width: 470px){
+    footer {
+        flex-direction: column;
+    }
+
+    footer div {
+        margin: 1rem auto;
+    }
+}
+
+
+
+
